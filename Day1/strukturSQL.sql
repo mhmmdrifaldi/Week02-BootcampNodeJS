@@ -86,3 +86,13 @@ create table project_assignment(
 	foreign key(pras_proj_id) references projects(proj_id) on update cascade on delete cascade,
 	foreign key(pras_employee_id) references employees(employee_id) on update cascade on delete cascade
 )
+
+-- Tabel Users
+create table users(
+	user_id serial primary key,
+	user_name varchar(50),
+	user_email varchar(50),
+	user_password varchar(255)
+)
+
+alter table employees add emp_profile varchar(255)
